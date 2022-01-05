@@ -20,22 +20,24 @@ public class Solution {
     }
 
     public static ArrayList<String> fix(ArrayList<String> strings) {
-        for (int i = strings.size()-1; i >= 0;i--) {
-            String s = strings.get(i);
+        ArrayList<String> res2 = new ArrayList<>();
 
-
-             if (s.contains("р") && s.contains("л")){
-                 continue;
+        for (String s : strings) {
+            if (s.contains("р") && s.contains("л")) {
+                res2.add(0,s);
             }
-            if (s.contains("р") && !s.contains("л")) {
-                strings.remove(i);
-            }
-
             if (s.contains("л") && !s.contains("р")) {
-                strings.add(i, s);
+                res2.add(0,s);
+                res2.add(0,s);
+
             }
+            if (!s.contains("р") && !s.contains("л")) {
+                res2.add(0,s);
+            }
+
 
         }
-        return strings;
+
+        return res2;
     }
 }
