@@ -11,22 +11,22 @@ import java.util.ArrayList;
 public class Solution {
     public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        ArrayList<String> list = new ArrayList<String>();
+        
+        ArrayList<String> list = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
             list.add(reader.readLine());
         }
 
         ArrayList<String> result = doubleValues(list);
+        
         for (String s : result) {
             System.out.println(s);
         }
-
     }
 
     public static ArrayList<String> doubleValues(ArrayList<String> list) {
         ArrayList<String> doubleList  = new ArrayList<>();
-        for (int i = 0; i < list.size(); i++) {
-            String s = list.get(i);
+        for (String s : list) {
             doubleList.add(s);
             doubleList.add(s);
         }
