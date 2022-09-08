@@ -13,16 +13,17 @@ public class Solution {
     }
 
     public static ArrayList<String>[] createList() {
-       ArrayList <String>[] arrayList = new ArrayList[10];
-        for (int i = 0; i < arrayList.length; i++) {
-            arrayList[i]= new ArrayList<String>();
+        ArrayList<String>[] result = new ArrayList[3];
 
-        }
-        for (int i = 0; i < arrayList.length; i++) {
-            arrayList[1]
-        }
+        result[0] = new ArrayList<>();
+        result[1] = new ArrayList<>();
+        result[2] = new ArrayList<>();
 
-        return arrayList;
+        result[0].add("Mama");
+        result[1].add("Mila");
+        result[2].add("Ramu");
+
+        return result;
     }
 
     public static void printList(ArrayList<String>[] arrayOfStringList) {
